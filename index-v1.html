@@ -3,15 +3,15 @@
 <head>
   <!-- ============================================================
     JOE on the Sound — Plataforma Oficial (SPA Autocontenida)
-    Identidad: Fondo Negro, Violeta Eléctrico, Amarillo Neón, Blanco
+    Identidad: Fondo Negro Profundo, Violeta Eléctrico, Amarillo Neón
     Enrutado: hash-routing (#/ruta) con secciones [data-route]
-    Protección: Ofuscación anti-scraping para datos sensibles
-    Capa de Datos: /ai semántica de alto contraste
+    Protección: Ofuscación activa anti-scraping para datos sensibles
+    Capa de Datos: /ai semántica para indexación limpia
   ============================================================ -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>JOE on the Sound — Ecosistema Creativo Panameño de Proyección Internacional</title>
-  <meta name="description" content="Ecosistema creativo panameño que integra música, tecnología, cultura latinoamericana y desarrollo artístico independiente.">
+  <meta name="description" content="Ecosistema creativo panameño que integra música, tecnología, cultura latinoamericana y desarrollo artístico independiente de la mano de JOE on the Sound.">
   <meta name="keywords" content="ecosistema creativo panameño, artista panameño independiente, productor musical en Panamá, música latinoamericana experimental, música urbana y electrónica desde Panamá, Joe on the Sound, producción musical con tecnología, cultura latinoamericana digital, artistas emergentes en Panamá, música con inteligencia artificial como herramienta creativa, house latino, afrobeat latino, canciones personalizadas, identidad sonora para marcas, música para contenido digital">
   <meta name="author" content="JOE on the Sound">
   <meta name="theme-color" content="#050508">
@@ -21,7 +21,6 @@
   <link rel="apple-touch-icon" href="/logo.png">
 
   <!-- Open Graph y Twitter Card para Previews -->
-  <!-- Creación sugerida: Crear y subir /og-joeonthesound.jpg en formato 1200x630 para previews de Canva, WhatsApp, Facebook, LinkedIn y Slack. -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://joeonthesound.online/">
   <meta property="og:title" content="JOE on the Sound — Ecosistema Creativo Panameño">
@@ -37,9 +36,9 @@
   <!-- Tipografías: Space Grotesk + Inter para alta legibilidad -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2 family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- SCHEMA.ORG JSON-LD MULTI-ENTIDAD ACTUALIZADO -->
+  <!-- SCHEMA.ORG JSON-LD MULTI-ENTIDAD -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -85,13 +84,6 @@
         "description": "Composición, producción y mezcla de canciones personalizadas a la medida para marcas, bodas, aniversarios y mascotas.",
         "provider": { "@id": "https://joeonthesound.online/#artist" },
         "areaServed": "Worldwide"
-      },
-      {
-        "@type": "Service",
-        "@id": "https://joeonthesound.online/#production-service",
-        "name": "Producción Musical Profesional",
-        "description": "Mezcla, mastering, arreglos y composición con tecnología avanzada de síntesis e inteligencia artificial como herramienta de apoyo.",
-        "provider": { "@id": "https://joeonthesound.online/#artist" }
       }
     ]
   }
@@ -148,7 +140,7 @@
       background: var(--primary);
     }
 
-    /* APP WRAPPER LAYOUT */
+    /* APP CONTAINER LAYOUT */
     .app-container {
       display: flex;
       flex-direction: column;
@@ -185,7 +177,7 @@
       }
     }
 
-    /* BRAND LOGO OFICIAL */
+    /* BRAND LOGO */
     .brand-box {
       display: flex;
       align-items: center;
@@ -309,7 +301,7 @@
     /* CONTENEDOR CENTRAL */
     .app-main-content {
       flex: 1;
-      padding-bottom: 130px; /* Margen para barras persistentes */
+      padding-bottom: 130px;
     }
 
     @media (min-width: 1024px) {
@@ -319,10 +311,10 @@
       }
     }
 
-    /* PERSISTENT MUSIC PLAYBACK DOCK */
+    /* PERSISTENT STICKY DOCK */
     .music-sticky-dock {
       position: fixed;
-      bottom: 64px; /* Flota arriba del dock móvil */
+      bottom: 64px;
       left: 0;
       right: 0;
       height: 44px;
@@ -788,7 +780,7 @@
       color: var(--text-main);
     }
 
-    /* TABLA DE MÉTRICAS (CRECIMIENTO ORGANICO) */
+    /* TABLA DE MÉTRICAS */
     .metrics-visual-wrapper {
       background: var(--panel);
       border-radius: 12px;
@@ -1057,7 +1049,7 @@
       padding-top: 1.5rem;
     }
 
-    /* ESTILO FORMULARIOS DENTRO DEL COTIZADOR */
+    /* ESTILO FORMULARIOS COTIZADOR */
     .input-field-element {
       display: flex;
       flex-direction: column;
@@ -1272,7 +1264,6 @@
       }
     }
 
-    /* COMPLEMENTOS DE SECCIÓN DE TABLAS */
     .ai-metadata-headline {
       font-family: var(--font-display);
       font-size: 1.3rem;
@@ -1442,7 +1433,7 @@
       { id: 5, title: "Fire Don’t Hurt Me Now", duration: "3:27", cover: "https://i.scdn.co/image/ab67616d00001e021324c2f6fdd734f5e3961110" }
     ];
 
-    // DISCOGRAFÍA OFICIAL (ESTRUCTURA DE SPOTIFY)
+    // DISCOGRAFÍA OFICIAL
     const SPOTIFY_DISCOGRAPHY = {
       "releases": [
         {
@@ -1508,7 +1499,7 @@
       ]
     };
 
-    // MÓDULO DE OFUSCACIÓN ANTI-SPAM (PROTECCIÓN DEBooking)
+    // OFUSCADOR DE CONTACTO ANTI-SPAM
     const Obfuscator = {
       decode: (b64) => {
         try { return atob(b64); } catch (e) { return b64; }
@@ -1528,7 +1519,7 @@
       }
     };
 
-    // PLAYER LIGHTBOX CONTROLLER
+    // LIGHTBOX DEL REPRODUCTOR
     const Lightbox = {
       open: function(videoId) {
         const container = document.getElementById('lightboxIframeContainer');
@@ -1555,7 +1546,7 @@
       }
     };
 
-    // TOAST ALERTA INTERACTIVA
+    // ALERTAS TOAST PERSONALIZADAS (REEMPLAZO DE ALERT())
     function showToast(message) {
       const existingToast = document.querySelector('.notification-toast');
       if (existingToast) existingToast.remove();
@@ -1572,7 +1563,20 @@
       }, 3500);
     }
 
-    // ROUTER SPA MOTOR DE CAMBIO DE VISTA
+    // STATE DEL COTIZADOR DE COSTOS (VARIABLE GLOBAL DEL MÓDULO)
+    let currentQuoterStep = 1;
+    const quoterState = {
+      formato: { value: "SINGLE", multiplier: 1.4 },
+      vocal: { value: "PRINCIPIANTE", hours: 10 },
+      tienePerfil: "NO",
+      plataformaName: "",
+      plataformaLink: "",
+      ocasion: { value: "Cumpleaños", cost: 180 },
+      estilo: { value: "Balada acústica", cost: 0 },
+      extras: []
+    };
+
+    // CONTROLLER SPA DEL RUTEO DE PÁGINAS
     const Router = {
       routes: {},
       addRoute: function(path, handler) { this.routes[path] = handler; },
@@ -1619,7 +1623,7 @@
     };
 
     // ==========================================
-    // RUTA VIRTUAL: INICIO
+    // RUTA VIRTUAL: INICIO (HOME PAGE)
     // ==========================================
     Router.addRoute('#/', function() {
       const randomVideo = YOUTUBE_VIDEOS[Math.floor(Math.random() * YOUTUBE_VIDEOS.length)];
@@ -1676,7 +1680,7 @@
             </div>
           </div>
 
-          <div style="display:grid; grid-template-columns:1fr; gap:2rem; margin-bottom:3rem; @media(min-width:1024px){ grid-template-columns:1.4fr 1fr; }">
+          <div style="display:grid; grid-template-columns:1fr; gap:2rem; margin-bottom:4rem; @media(min-width:1024px){ grid-template-columns:1.4fr 1fr; }">
             <div>
               <h2 class="heading-primary">Temas <span class="accent-phrase">Populares</span></h2>
               <div class="spotify-tracklist">${popularHTML}</div>
@@ -1692,12 +1696,311 @@
               </a>
             </div>
           </div>
+
+          <!-- ============================================================
+            SECCIÓN DEL COTIZADOR PRESTABLECIDO ANTES DEL PIE DE PÁGINA (HOME)
+          ============================================================ -->
+          <h2 class="heading-primary" id="calculadora-costos">Cotizador & <span class="accent-phrase">Calculadora de Presupuestos</span></h2>
+          <div class="quoter-component-panel" id="premiumQuoter">
+            <div class="quoter-header-track">
+              <i class="active" id="qBar1"></i>
+              <i id="qBar2"></i>
+              <i id="qBar3"></i>
+              <i id="qBar4"></i>
+              <i id="qBar5"></i>
+              <i id="qBar6"></i>
+            </div>
+
+            <!-- PASO 1: FORMATO DEL PROYECTO -->
+            <div class="quoter-slide active" id="quoterStep1">
+              <h3>1 · Formato del Proyecto</h3>
+              <p style="color:var(--text-muted); font-size:0.85rem; margin-bottom:1rem;">Las canciones de un álbum disfrutan de una estructura de producción por lote. Contratar un single individual cuenta con un recargo promedio del +40% debido a costes de calibración del estudio.</p>
+              <div class="quoter-options-container" data-quoter-var="formato">
+                <div class="quoter-option-btn selected" data-value="SINGLE" data-multiplier="1.4">
+                  <h4>Canción Única</h4>
+                  <p>Ajustes específicos (+40% Recargo)</p>
+                </div>
+                <div class="quoter-option-btn" data-value="ALBUM" data-multiplier="1.0">
+                  <h4>Proyecto de Álbum</h4>
+                  <p>Tarifa base reducida por volumen</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- PASO 2: EXPERIENCIA VOCAL -->
+            <div class="quoter-slide" id="quoterStep2">
+              <h3>2 · Experiencia Vocal del Cantante</h3>
+              <p style="color:var(--text-muted); font-size:0.85rem; margin-bottom:1rem;">Cada hora de grabación de cabina e ingeniería cuesta $200 USD. Un menor nivel de entrenamiento vocal requiere más horas de estudio, afinamiento y corrección tímbrica avanzada.</p>
+              <div class="quoter-options-container" data-quoter-var="vocal">
+                <div class="quoter-option-btn selected" data-value="PRINCIPIANTE" data-hours="10">
+                  <h4>Principiante</h4>
+                  <p>Est. 10 horas de estudio ($2,000)</p>
+                </div>
+                <div class="quoter-option-btn" data-value="INTERMEDIO" data-hours="5">
+                  <h4>Intermedio</h4>
+                  <p>Est. 5 horas de estudio ($1,000)</p>
+                </div>
+                <div class="quoter-option-btn" data-value="PROFESIONAL" data-hours="2">
+                  <h4>Profesional</h4>
+                  <p>Est. 2 horas de estudio ($400)</p>
+                </div>
+                <div class="quoter-option-btn" data-value="INSTRUMENTAL" data-hours="0">
+                  <h4>Instrumental / Sin Voz</h4>
+                  <p>0 horas de grabación de voz ($0)</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- PASO 3: PLATAFORMAS ARTÍSTICAS -->
+            <div class="quoter-slide" id="quoterStep3">
+              <h3>3 · Perfil de Artista Activo</h3>
+              <p style="color:var(--text-muted); font-size:0.85rem; margin-bottom:1rem;">Por favor indícanos si tienes presencia activa para estudiar tu propuesta de valor, identidad y estilo musical preexistente.</p>
+              <div class="quoter-options-container" data-quoter-var="perfil_plataformas">
+                <div class="quoter-option-btn selected" data-value="NO" onclick="togglePlatformFields(false)">
+                  <h4>No tengo perfil</h4>
+                  <p>Creación de marca sonora desde cero</p>
+                </div>
+                <div class="quoter-option-btn" data-value="SI" onclick="togglePlatformFields(true)">
+                  <h4>Sí tengo perfil</h4>
+                  <p>Proporcionar enlaces de verificación</p>
+                </div>
+              </div>
+              <div id="wrapperPlatformInputs" style="display:none; margin-top:1rem;">
+                <div class="input-field-element">
+                  <label>¿En qué plataforma estás? (ej. Spotify, YouTube, Soundcloud)</label>
+                  <input type="text" id="quoterPlatformName" placeholder="Plataforma de streaming">
+                </div>
+                <div class="input-field-element">
+                  <label>Enlace oficial de tu perfil / Nombre de usuario</label>
+                  <input type="text" id="quoterPlatformLink" placeholder="https://...">
+                </div>
+              </div>
+            </div>
+
+            <!-- PASO 4: OCASIÓN Y ESTILO -->
+            <div class="quoter-slide" id="quoterStep4">
+              <h3>4 · Ocasión y Estilo Musical</h3>
+              <div class="input-field-element">
+                <label>Ocasión / Propósito</label>
+                <select id="quoterOccasionSelect">
+                  <option value="Cumpleaños" data-cost="180">Cumpleaños (Base $180)</option>
+                  <option value="Boda / Aniversario" data-cost="320">Boda / Aniversario (Base $320)</option>
+                  <option value="Empresa / Marca" data-cost="480">Empresa / Marca (Base $480)</option>
+                  <option value="Mascota" data-cost="150">Mascota (Base $150)</option>
+                </select>
+              </div>
+              <div class="input-field-element">
+                <label>Dirección Estilística</label>
+                <select id="quoterStyleSelect">
+                  <option value="Balada acústica" data-cost="0">Balada Acústica (Base)</option>
+                  <option value="Pop / Urbano" data-cost="40">Pop / Urbano (+$40)</option>
+                  <option value="Típico panameño" data-cost="60">Típico panameño (+$60)</option>
+                  <option value="Electrónica cinematográfica" data-cost="60">Electrónica Cinematográfica (+$60)</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- PASO 5: EXTRAS -->
+            <div class="quoter-slide" id="quoterStep5">
+              <h3>5 · Elementos Adicionales</h3>
+              <p style="color:var(--text-muted); font-size:0.85rem; margin-bottom:1rem;">Optimiza el alcance e impacto de tu canción personalizada agregando activos complementarios.</p>
+              <div style="display:flex; flex-direction:column; gap:0.6rem;">
+                <label style="display:flex; align-items:center; gap:0.5rem; cursor:pointer;">
+                  <input type="checkbox" class="quoter-extra-cb" data-value="Video lyric" data-cost="90">
+                  <span>Video Lyric Premium (+$90)</span>
+                </label>
+                <label style="display:flex; align-items:center; gap:0.5rem; cursor:pointer;">
+                  <input type="checkbox" class="quoter-extra-cb" data-value="Entrega exprés 72h" data-cost="120">
+                  <span>Entrega exprés en 72 horas (+$120)</span>
+                </label>
+                <label style="display:flex; align-items:center; gap:0.5rem; cursor:pointer;">
+                  <input type="checkbox" class="quoter-extra-cb" data-value="Segunda voz invitada" data-cost="80">
+                  <span>Segunda voz profesional invitada (+$80)</span>
+                </label>
+                <label style="display:flex; align-items:center; gap:0.5rem; cursor:pointer;">
+                  <input type="checkbox" class="quoter-extra-cb" data-value="Registro de obra" data-cost="50">
+                  <span>Registro formal de derechos de autor (+$50)</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- PASO 6: DETALLE FINAL -->
+            <div class="quoter-slide" id="quoterStep6">
+              <h3>6 · Resumen del Presupuesto de Producción</h3>
+              <div class="quoter-summary-block" id="quoterSummaryContainer"></div>
+              <div class="quoter-cost-total">Total Estimado: <span id="quoterTotalSpan">$0</span> USD</div>
+              <p style="font-size:0.8rem; color:var(--text-muted); margin-bottom:1.5rem;">Este presupuesto es referencial, incluye los recargos por hora de cabina e ingeniería y será confirmado formalmente mediante agenda de estudio.</p>
+              <button class="action-btn btn-solid-primary" style="width:100%; justify-content:center;" onclick="sendQuoterBriefToWA()">Enviar Brief por WhatsApp →</button>
+            </div>
+
+            <!-- CONTROLES -->
+            <div class="quoter-navigation-tray">
+              <button class="action-btn btn-outline-primary" id="quoterPrevBtn" onclick="navigateQuoter(-1)" disabled>Atrás</button>
+              <button class="action-btn btn-solid-primary" id="quoterNextBtn" onclick="navigateQuoter(1)">Siguiente</button>
+            </div>
+          </div>
         </section>
       `;
+
+      // Inicializar listeners y UI de la calculadora al cargar el Home
+      setupQuoterListeners();
+      currentQuoterStep = 1;
+      updateQuoterUI();
     });
 
+    // FUNCIONES GLOBALES DE MANEJO DE LA CALCULADORA
+    function togglePlatformFields(show) {
+      const inputs = document.getElementById('wrapperPlatformInputs');
+      if (inputs) inputs.style.display = show ? 'block' : 'none';
+      quoterState.tienePerfil = show ? "SI" : "NO";
+    }
+
+    function setupQuoterListeners() {
+      const container = document.getElementById('premiumQuoter');
+      if (!container) return;
+
+      const stepContainers = container.querySelectorAll('.quoter-options-container');
+      stepContainers.forEach(group => {
+        const key = group.getAttribute('data-quoter-var');
+        const buttons = group.querySelectorAll('.quoter-option-btn');
+        buttons.forEach(btn => {
+          btn.addEventListener('click', () => {
+            buttons.forEach(b => b.classList.remove('selected'));
+            btn.classList.add('selected');
+
+            if (key === 'formato') {
+              quoterState.formato.value = btn.getAttribute('data-value');
+              quoterState.formato.multiplier = parseFloat(btn.getAttribute('data-multiplier'));
+            } else if (key === 'vocal') {
+              quoterState.vocal.value = btn.getAttribute('data-value');
+              quoterState.vocal.hours = parseInt(btn.getAttribute('data-hours'));
+            }
+          });
+        });
+      });
+    }
+
+    function navigateQuoter(dir) {
+      if (dir === 1) {
+        if (currentQuoterStep === 3 && quoterState.tienePerfil === "SI") {
+          const platName = document.getElementById('quoterPlatformName').value.trim();
+          const platLink = document.getElementById('quoterPlatformLink').value.trim();
+          if (!platName || !platLink) {
+            showToast('Por favor introduce tu plataforma principal y el enlace a tu perfil.');
+            return;
+          }
+          quoterState.plataformaName = platName;
+          quoterState.plataformaLink = platLink;
+        }
+        currentQuoterStep = Math.min(6, currentQuoterStep + 1);
+      } else {
+        currentQuoterStep = Math.max(1, currentQuoterStep - 1);
+      }
+
+      if (currentQuoterStep === 4) {
+        const occasionSel = document.getElementById('quoterOccasionSelect');
+        const styleSel = document.getElementById('quoterStyleSelect');
+        if (occasionSel) {
+          quoterState.ocasion.value = occasionSel.value;
+          quoterState.ocasion.cost = parseInt(occasionSel.options[occasionSel.selectedIndex].getAttribute('data-cost'));
+        }
+        if (styleSel) {
+          quoterState.estilo.value = styleSel.value;
+          quoterState.estilo.cost = parseInt(styleSel.options[styleSel.selectedIndex].getAttribute('data-cost'));
+        }
+      }
+
+      if (currentQuoterStep === 5) {
+        const checkBoxes = document.querySelectorAll('.quoter-extra-cb');
+        quoterState.extras = [];
+        checkBoxes.forEach(cb => {
+          if (cb.checked) {
+            quoterState.extras.push({
+              value: cb.getAttribute('data-value'),
+              cost: parseInt(cb.getAttribute('data-cost'))
+            });
+          }
+        });
+      }
+
+      updateQuoterUI();
+    }
+
+    function calculateQuoterTotal() {
+      const baseOccasion = quoterState.ocasion.cost;
+      const formatMultiplier = quoterState.formato.multiplier;
+      const calculatedOccasion = Math.round(baseOccasion * formatMultiplier);
+
+      const hoursCost = quoterState.vocal.hours * 200;
+      const styleCost = quoterState.estilo.cost;
+      const extrasCost = quoterState.extras.reduce((acc, curr) => acc + curr.cost, 0);
+
+      return calculatedOccasion + hoursCost + styleCost + extrasCost;
+    }
+
+    function updateQuoterUI() {
+      for (let i = 1; i <= 6; i++) {
+        const slide = document.getElementById(`quoterStep${i}`);
+        const bar = document.getElementById(`qBar${i}`);
+        if (slide) slide.classList.toggle('active', i === currentQuoterStep);
+        if (bar) bar.classList.toggle('active', i <= currentQuoterStep);
+      }
+
+      document.getElementById('quoterPrevBtn').disabled = currentQuoterStep === 1;
+      document.getElementById('quoterNextBtn').style.display = currentQuoterStep === 6 ? 'none' : 'inline-flex';
+
+      if (currentQuoterStep === 6) {
+        const summaryBox = document.getElementById('quoterSummaryContainer');
+        const total = calculateQuoterTotal();
+
+        let platformText = quoterState.tienePerfil === 'SI' 
+          ? `Sí (${quoterState.plataformaName} · ${quoterState.plataformaLink})` 
+          : 'No tiene perfiles activos';
+
+        let extrasText = quoterState.extras.length > 0 
+          ? quoterState.extras.map(e => `${e.value} (+$${e.cost})`).join(', ') 
+          : 'Ninguno';
+
+        summaryBox.innerHTML = `
+          <p><strong>Formato seleccionado:</strong> ${quoterState.formato.value === 'SINGLE' ? 'Canción Única (+40% aplicado)' : 'Proyecto de Álbum'}</p>
+          <p><strong>Nivel de canto / Grabación:</strong> ${quoterState.vocal.value} (${quoterState.vocal.hours} horas de cabina est. @$200/h)</p>
+          <p><strong>Perfil de artista:</strong> ${platformText}</p>
+          <p><strong>Ocasión / Estilo:</strong> ${quoterState.ocasion.value} ($${quoterState.ocasion.cost}) · ${quoterState.estilo.value} (+$${quoterState.estilo.cost})</p>
+          <p><strong>Extras seleccionados:</strong> ${extrasText}</p>
+        `;
+
+        document.getElementById('quoterTotalSpan').textContent = total;
+      }
+    }
+
+    function sendQuoterBriefToWA() {
+      const total = calculateQuoterTotal();
+      let platformText = quoterState.tienePerfil === 'SI' 
+        ? `Sí (${quoterState.plataformaName} · ${quoterState.plataformaLink})` 
+        : 'No tiene';
+
+      let extrasText = quoterState.extras.length > 0 
+        ? quoterState.extras.map(e => e.value).join(', ') 
+        : 'Ninguno';
+
+      const textMessage = `Hola JOE, he generado un brief de producción desde tu web:
+- Formato: ${quoterState.formato.value === 'SINGLE' ? 'Canción Única' : 'Proyecto de Álbum'}
+- Nivel de canto: ${quoterState.vocal.value} (${quoterState.vocal.hours} horas de estudio)
+- Perfil Verificado: ${platformText}
+- Ocasión: ${quoterState.ocasion.value}
+- Estilo: ${quoterState.estilo.value}
+- Extras: ${extrasText}
+
+Presupuesto de producción calculado: $${total} USD.
+Quedo a la espera de la disponibilidad de tu agenda.`;
+
+      const encoded = encodeURIComponent(textMessage);
+      window.open(`https://wa.me/50765164741?text=${encoded}`, '_blank');
+      showToast('Redirigiendo a tu cliente de WhatsApp...');
+    }
+
     // ==========================================
-    // RUTA VIRTUAL: PROYECTO
+    // RUTA VIRTUAL: EL PROYECTO
     // ==========================================
     Router.addRoute('#/proyecto', function() {
       document.getElementById('viewport').innerHTML = `
@@ -1711,7 +2014,7 @@
           <div style="line-height:1.8; color:var(--text-light); margin-bottom:3rem; max-width:850px; font-size:1rem;">
             <p style="margin-bottom:1.2rem;"><strong>Joe on the Sound</strong> es un ecosistema creativo panameño que integra música, tecnología, cultura latinoamericana y desarrollo artístico independiente. El proyecto busca construir una estructura autosostenible que conecte producción musical, contenido digital, artistas emergentes, análisis de datos, identidad sonora y comunidad.</p>
             <p style="margin-bottom:1.2rem;">Fundado en Panamá y concebido con una visión de proyección global (2026-2029), el proyecto tiene como objetivo situar la creatividad latinoamericana en la nueva era digital mediante el arte, la experimentación y el uso estratégico de la tecnología.</p>
-            <p>La inteligencia artificial debe presentarse como una herramienta de apoyo avanzada, no como el núcleo creativo del proyecto. La IA optimiza la creación, experimentación y distribución, pero el valor central sigue siendo enteramente humano: la visión artística, el criterio cultural, la narrativa y la sensibilidad musical.</p>
+            <p>La inteligencia artificial se presenta como una herramienta de apoyo avanzada, no como el núcleo creativo del proyecto. La IA optimiza la creación, experimentación y distribución, pero el valor central sigue siendo enteramente humano: la visión artística, el criterio cultural, la narrativa y la sensibilidad musical.</p>
           </div>
 
           <h2 class="heading-primary">Elementos clave de <span class="accent-phrase">Diferenciación</span></h2>
@@ -1724,12 +2027,12 @@
             <div class="diff-brand-card">
               <span class="diff-card-digit">02</span>
               <h3 class="diff-brand-card-header">Enfoque Humano</h3>
-              <p class="diff-brand-card-desc">Música impregnada de historia, propósito, exploración emocional y visión latinoamericana.</p>
+              <p class="diff-card-desc">Música impregnada de historia, propósito, exploración emocional y visión latinoamericana.</p>
             </div>
             <div class="diff-brand-card">
-              <span class="diff-brand-digit">03</span>
+              <span class="diff-card-digit">03</span>
               <h3 class="diff-brand-card-header">Infraestructura propia</h3>
-              <p class="diff-brand-card-desc">Análisis, creación, entorno natural, contenido digital y espacio residencial como base del ecosistema.</p>
+              <p class="diff-card-desc">Análisis, creación, entorno natural, contenido digital y espacio residencial como base del ecosistema.</p>
             </div>
             <div class="diff-brand-card">
               <span class="diff-brand-digit">04</span>
@@ -1809,10 +2112,6 @@
           <div class="card-grid">${releasesHTML}</div>
         </section>
       `;
-    });
-
-    Router.addRoute('#/discografia', function() {
-      window.location.hash = '#/musica';
     });
 
     // ==========================================
@@ -1902,7 +2201,7 @@
     }
 
     // ==========================================
-    // RUTA VIRTUAL: SERVICIOS Y COTIZADOR AVANZADO
+    // RUTA VIRTUAL: SERVICIOS
     // ==========================================
     Router.addRoute('#/servicios', function() {
       let servicesHTML = '';
@@ -1921,321 +2220,14 @@
         <section class="view-container">
           <h1 class="heading-primary">Servicios de <span class="accent-phrase">Producción</span></h1>
           <div style="display:grid; grid-template-columns:1fr; gap:1.5rem; margin-bottom:3rem; @media(min-width:768px){ grid-template-columns:repeat(3, 1fr); }">${servicesHTML}</div>
-
-          <!-- COTIZADOR MULTIPASOS PREMIUM INTEGRADO -->
-          <h2 class="heading-primary">Cotizador & <span class="accent-phrase">Briefing Dinámico</span></h2>
-          <div class="quoter-component-panel" id="premiumQuoter">
-            <div class="quoter-header-track">
-              <i class="active" id="qBar1"></i>
-              <i id="qBar2"></i>
-              <i id="qBar3"></i>
-              <i id="qBar4"></i>
-              <i id="qBar5"></i>
-              <i id="qBar6"></i>
-            </div>
-
-            <!-- PASO 1: TIPO DE PROYECTO (DIFERENCIACIÓN CANCIÓN VS ÁLBUM) -->
-            <div class="quoter-slide active" id="quoterStep1">
-              <h3>1 · Formato del proyecto</h3>
-              <p style="color:var(--text-muted); font-size:0.85rem; margin-bottom:1rem;">Las canciones de un álbum se benefician de una estructura de producción por lote. Contratar un single individual cuenta con un recargo promedio del +40% debido a costes de calibración del estudio.</p>
-              <div class="quoter-options-container" data-quoter-var="formato">
-                <div class="quoter-option-btn selected" data-value="SINGLE" data-multiplier="1.4">
-                  <h4>Canción Única</h4>
-                  <p>Ajustes específicos (+40% Recargo)</p>
-                </div>
-                <div class="quoter-option-btn" data-value="ALBUM" data-multiplier="1.0">
-                  <h4>Proyecto de Álbum</h4>
-                  <p>Tarifa base reducida por volumen</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- PASO 2: NIVEL DE EXPERIENCIA VOCAL (HORAS DE GRABACIÓN @$200/HR) -->
-            <div class="quoter-slide" id="quoterStep2">
-              <h3>2 · Nivel de Experiencia del Vocalista</h3>
-              <p style="color:var(--text-muted); font-size:0.85rem; margin-bottom:1rem;">Cada hora de grabación de cabina e ingeniería cuesta $200 USD. Un menor nivel de entrenamiento vocal requiere más horas de estudio, corrección tímbrica, afinamiento y edición manual avanzada.</p>
-              <div class="quoter-options-container" data-quoter-var="vocal">
-                <div class="quoter-option-btn selected" data-value="PRINCIPIANTE" data-hours="10">
-                  <h4>Principiante</h4>
-                  <p>Est. 10 horas de estudio ($2000)</p>
-                </div>
-                <div class="quoter-option-btn" data-value="INTERMEDIO" data-hours="5">
-                  <h4>Intermedio</h4>
-                  <p>Est. 5 horas de estudio ($1000)</p>
-                </div>
-                <div class="quoter-option-btn" data-value="PROFESIONAL" data-hours="2">
-                  <h4>Profesional</h4>
-                  <p>Est. 2 horas de estudio ($400)</p>
-                </div>
-                <div class="quoter-option-btn" data-value="INSTRUMENTAL" data-hours="0">
-                  <h4>Instrumental / Sin Voz</h4>
-                  <p>0 horas de grabación de voz ($0)</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- PASO 3: PRESENCIA/VERIFICACIÓN ARTÍSTICA EN PLATAFORMAS -->
-            <div class="quoter-slide" id="quoterStep3">
-              <h3>3 · Perfil Artístico en Plataformas</h3>
-              <p style="color:var(--text-muted); font-size:0.85rem; margin-bottom:1rem;">Por favor indícanos si tienes presencia activa para estudiar tu propuesta de valor, identidad y estilo musical preexistente.</p>
-              <div class="quoter-options-container" data-quoter-var="perfil_plataformas">
-                <div class="quoter-option-btn selected" data-value="NO" onclick="togglePlatformFields(false)">
-                  <h4>No tengo perfil</h4>
-                  <p>Creación de marca sonora desde cero</p>
-                </div>
-                <div class="quoter-option-btn" data-value="SI" onclick="togglePlatformFields(true)">
-                  <h4>Sí tengo perfil</h4>
-                  <p>Proporcionar enlaces de verificación</p>
-                </div>
-              </div>
-              <div id="wrapperPlatformInputs" style="display:none; margin-top:1rem;">
-                <div class="input-field-element">
-                  <label>¿En qué plataforma estás? (ej. Spotify, YouTube, Soundcloud)</label>
-                  <input type="text" id="quoterPlatformName" placeholder="Plataforma de streaming">
-                </div>
-                <div class="input-field-element">
-                  <label>Enlace oficial de tu perfil / Nombre de usuario</label>
-                  <input type="text" id="quoterPlatformLink" placeholder="https://...">
-                </div>
-              </div>
-            </div>
-
-            <!-- PASO 4: OCASIÓN Y ESTILO -->
-            <div class="quoter-slide" id="quoterStep4">
-              <h3>4 · Ocasión y Estilo Musical</h3>
-              <div class="input-field-element">
-                <label>Ocasión / Propósito</label>
-                <select id="quoterOccasionSelect">
-                  <option value="Cumpleaños" data-cost="180">Cumpleaños (Base $180)</option>
-                  <option value="Boda / Aniversario" data-cost="320">Boda / Aniversario (Base $320)</option>
-                  <option value="Empresa / Marca" data-cost="480">Empresa / Marca (Base $480)</option>
-                  <option value="Mascota" data-cost="150">Mascota (Base $150)</option>
-                </select>
-              </div>
-              <div class="input-field-element">
-                <label>Dirección Estilística</label>
-                <select id="quoterStyleSelect">
-                  <option value="Balada acústica" data-cost="0">Balada Acústica (Base)</option>
-                  <option value="Pop / Urbano" data-cost="40">Pop / Urbano (+$40)</option>
-                  <option value="Típico panameño" data-cost="60">Típico panameño (+$60)</option>
-                  <option value="Electrónica cinematográfica" data-cost="60">Electrónica Cinematográfica (+$60)</option>
-                </select>
-              </div>
-            </div>
-
-            <!-- PASO 5: EXTRAS DE DISTRIBUCIÓN -->
-            <div class="quoter-slide" id="quoterStep5">
-              <h3>5 · Elementos Adicionales de Distribución</h3>
-              <p style="color:var(--text-muted); font-size:0.85rem; margin-bottom:1rem;">Optimiza el alcance e impacto de tu canción personalizada agregando activos complementarios.</p>
-              <div style="display:flex; flex-direction:column; gap:0.6rem;">
-                <label style="display:flex; align-items:center; gap:0.5rem; cursor:pointer;">
-                  <input type="checkbox" class="quoter-extra-cb" data-value="Video lyric" data-cost="90">
-                  <span>Video Lyric Premium (+$90)</span>
-                </label>
-                <label style="display:flex; align-items:center; gap:0.5rem; cursor:pointer;">
-                  <input type="checkbox" class="quoter-extra-cb" data-value="Entrega exprés 72h" data-cost="120">
-                  <span>Entrega exprés en 72 horas (+$120)</span>
-                </label>
-                <label style="display:flex; align-items:center; gap:0.5rem; cursor:pointer;">
-                  <input type="checkbox" class="quoter-extra-cb" data-value="Segunda voz invitada" data-cost="80">
-                  <span>Segunda voz profesional invitada (+$80)</span>
-                </label>
-                <label style="display:flex; align-items:center; gap:0.5rem; cursor:pointer;">
-                  <input type="checkbox" class="quoter-extra-cb" data-value="Registro de obra" data-cost="50">
-                  <span>Registro formal de derechos de autor (+$50)</span>
-                </label>
-              </div>
-            </div>
-
-            <!-- PASO 6: DETALLE FINAL DEL PRESUPUESTO -->
-            <div class="quoter-slide" id="quoterStep6">
-              <h3>6 · Resumen y Presupuesto de Producción</h3>
-              <div class="quoter-summary-block" id="quoterSummaryContainer"></div>
-              <div class="quoter-cost-total">Total Estimado: <span id="quoterTotalSpan">$0</span> USD</div>
-              <p style="font-size:0.8rem; color:var(--text-muted); margin-bottom:1.5rem;">Este presupuesto es referencial, incluye los recargos por hora de cabina e ingeniería y será confirmado formalmente mediante agenda de estudio.</p>
-              <button class="action-btn btn-solid-primary" style="width:100%; justify-content:center;" onclick="sendQuoterBriefToWA()">Enviar Brief por WhatsApp →</button>
-            </div>
-
-            <!-- CONTROLES DE DIRECCIÓN -->
-            <div class="quoter-navigation-tray">
-              <button class="action-btn btn-outline-primary" id="quoterPrevBtn" onclick="navigateQuoter(-1)" disabled>Atrás</button>
-              <button class="action-btn btn-solid-primary" id="quoterNextBtn" onclick="navigateQuoter(1)">Siguiente</button>
-            </div>
+          <div style="background:var(--panel); border:1px solid var(--border); padding:2.5rem; border-radius:12px; text-align:center;">
+            <h3 style="font-family:var(--font-display); font-size:1.5rem; margin-bottom:1rem; text-transform:uppercase;">¿Deseas calcular un presupuesto?</h3>
+            <p style="color:var(--text-muted); margin-bottom:1.5rem; max-width:600px; margin-inline:auto; font-size:0.95rem;">Hemos integrado nuestro cotizador interactivo inteligente directamente en la página de inicio para tu comodidad.</p>
+            <a href="#/" class="action-btn btn-solid-primary">Ir al Cotizador en el Inicio</a>
           </div>
         </section>
       `;
-      setupQuoterListeners();
     });
-
-    // LÓGICA DEL COTIZADOR DINÁMICO
-    let currentQuoterStep = 1;
-    const quoterState = {
-      formato: { value: "SINGLE", multiplier: 1.4 },
-      vocal: { value: "PRINCIPIANTE", hours: 10 },
-      tienePerfil: "NO",
-      plataformaName: "",
-      plataformaLink: "",
-      ocasion: { value: "Cumpleaños", cost: 180 },
-      estilo: { value: "Balada acústica", cost: 0 },
-      extras: []
-    };
-
-    function togglePlatformFields(show) {
-      const inputs = document.getElementById('wrapperPlatformInputs');
-      if (inputs) inputs.style.display = show ? 'block' : 'none';
-      quoterState.tienePerfil = show ? "SI" : "NO";
-    }
-
-    function setupQuoterListeners() {
-      const container = document.getElementById('premiumQuoter');
-      if (!container) return;
-
-      // Eventos para selección en Paso 1 y Paso 2
-      const stepContainers = container.querySelectorAll('.quoter-options-container');
-      stepContainers.forEach(group => {
-        const key = group.getAttribute('data-quoter-var');
-        const buttons = group.querySelectorAll('.quoter-option-btn');
-        buttons.forEach(btn => {
-          btn.addEventListener('click', () => {
-            buttons.forEach(b => b.classList.remove('selected'));
-            btn.classList.add('selected');
-
-            if (key === 'formato') {
-              quoterState.formato.value = btn.getAttribute('data-value');
-              quoterState.formato.multiplier = parseFloat(btn.getAttribute('data-multiplier'));
-            } else if (key === 'vocal') {
-              quoterState.vocal.value = btn.getAttribute('data-value');
-              quoterState.vocal.hours = parseInt(btn.getAttribute('data-hours'));
-            } else if (key === 'perfil_plataformas') {
-              // Manejado por inline onclick para compatibilidad rápida
-            }
-          });
-        });
-      });
-    }
-
-    function navigateQuoter(dir) {
-      if (dir === 1) {
-        // Validaciones previas
-        if (currentQuoterStep === 3 && quoterState.tienePerfil === "SI") {
-          const platName = document.getElementById('quoterPlatformName').value.trim();
-          const platLink = document.getElementById('quoterPlatformLink').value.trim();
-          if (!platName || !platLink) {
-            showToast('Por favor introduce tu plataforma principal y el enlace a tu perfil.');
-            return;
-          }
-          quoterState.plataformaName = platName;
-          quoterState.plataformaLink = platLink;
-        }
-        currentQuoterStep = Math.min(6, currentQuoterStep + 1);
-      } else {
-        currentQuoterStep = Math.max(1, currentQuoterStep - 1);
-      }
-
-      // Procesar valores dinámicos antes del resumen
-      if (currentQuoterStep === 4) {
-        const occasionSel = document.getElementById('quoterOccasionSelect');
-        const styleSel = document.getElementById('quoterStyleSelect');
-        if (occasionSel) {
-          quoterState.ocasion.value = occasionSel.value;
-          quoterState.ocasion.cost = parseInt(occasionSel.options[occasionSel.selectedIndex].getAttribute('data-cost'));
-        }
-        if (styleSel) {
-          quoterState.estilo.value = styleSel.value;
-          quoterState.estilo.cost = parseInt(styleSel.options[styleSel.selectedIndex].getAttribute('data-cost'));
-        }
-      }
-
-      if (currentQuoterStep === 5) {
-        const checkBoxes = document.querySelectorAll('.quoter-extra-cb');
-        quoterState.extras = [];
-        checkBoxes.forEach(cb => {
-          if (cb.checked) {
-            quoterState.extras.push({
-              value: cb.getAttribute('data-value'),
-              cost: parseInt(cb.getAttribute('data-cost'))
-            });
-          }
-        });
-      }
-
-      updateQuoterUI();
-    }
-
-    function calculateQuoterTotal() {
-      const baseOccasion = quoterState.ocasion.cost;
-      const formatMultiplier = quoterState.formato.multiplier;
-      const calculatedOccasion = Math.round(baseOccasion * formatMultiplier);
-
-      const hoursCost = quoterState.vocal.hours * 200;
-      const styleCost = quoterState.estilo.cost;
-      const extrasCost = quoterState.extras.reduce((acc, current) => acc + current.cost, 0);
-
-      return calculatedOccasion + hoursCost + styleCost + extrasCost;
-    }
-
-    function updateQuoterUI() {
-      // Activar vistas de pasos
-      for (let i = 1; i <= 6; i++) {
-        const slide = document.getElementById(`quoterStep${i}`);
-        const bar = document.getElementById(`qBar${i}`);
-        if (slide) slide.classList.toggle('active', i === currentQuoterStep);
-        if (bar) bar.classList.toggle('active', i <= currentQuoterStep);
-      }
-
-      // Habilitar/Deshabilitar botones de navegación
-      document.getElementById('quoterPrevBtn').disabled = currentQuoterStep === 1;
-      document.getElementById('quoterNextBtn').style.display = currentQuoterStep === 6 ? 'none' : 'inline-flex';
-
-      if (currentQuoterStep === 6) {
-        const summaryBox = document.getElementById('quoterSummaryContainer');
-        const total = calculateQuoterTotal();
-
-        let platformText = quoterState.tienePerfil === 'SI' 
-          ? `Sí (${quoterState.plataformaName} · ${quoterState.plataformaLink})` 
-          : 'No tiene perfiles activos';
-
-        let extrasText = quoterState.extras.length > 0 
-          ? quoterState.extras.map(e => `${e.value} (+$${e.cost})`).join(', ') 
-          : 'Ninguno';
-
-        summaryBox.innerHTML = `
-          <p><strong>Formato seleccionado:</strong> ${quoterState.formato.value === 'SINGLE' ? 'Canción Única (+40% aplicado)' : 'Proyecto de Álbum'}</p>
-          <p><strong>Nivel de canto / Grabación:</strong> ${quoterState.vocal.value} (${quoterState.vocal.hours} horas de cabina est. @$200/h)</p>
-          <p><strong>Perfil de artista:</strong> ${platformText}</p>
-          <p><strong>Ocasión / Estilo:</strong> ${quoterState.ocasion.value} ($${quoterState.ocasion.cost}) · ${quoterState.estilo.value} (+$${quoterState.estilo.cost})</p>
-          <p><strong>Extras seleccionados:</strong> ${extrasText}</p>
-        `;
-
-        document.getElementById('quoterTotalSpan').textContent = total;
-      }
-    }
-
-    function sendQuoterBriefToWA() {
-      const total = calculateQuoterTotal();
-      let platformText = quoterState.tienePerfil === 'SI' 
-        ? `Sí (${quoterState.plataformaName} · ${quoterState.plataformaLink})` 
-        : 'No tiene';
-
-      let extrasText = quoterState.extras.length > 0 
-        ? quoterState.extras.map(e => e.value).join(', ') 
-        : 'Ninguno';
-
-      const textMessage = `Hola JOE, he generado un brief de producción desde tu web:
-- Formato: ${quoterState.formato.value === 'SINGLE' ? 'Canción Única' : 'Proyecto de Álbum'}
-- Nivel de canto: ${quoterState.vocal.value} (${quoterState.vocal.hours} horas de estudio)
-- Perfil Verificado: ${platformText}
-- Ocasión: ${quoterState.ocasion.value}
-- Estilo: ${quoterState.estilo.value}
-- Extras: ${extrasText}
-
-Presupuesto de producción calculado: $${total} USD.
-Quedo a la espera de la disponibilidad de tu agenda.`;
-
-      const encoded = encodeURIComponent(textMessage);
-      window.open(`https://wa.me/50765164741?text=${encoded}`, '_blank');
-      showToast('Redirigiendo a tu cliente de WhatsApp...');
-    }
 
     // ==========================================
     // RUTA VIRTUAL: SOBRE JOE (SENSILIBIDAD Y TECNOLOGÍA)
@@ -2250,13 +2242,13 @@ Quedo a la espera de la disponibilidad de tu agenda.`;
               <span class="badge-location">Líder del Proyecto</span>
               <h2 style="font-family:var(--font-display); font-size:1.8rem; text-transform:uppercase; margin-bottom:1rem;">JOE on the Sound</h2>
               <p style="color:var(--text-light); line-height:1.7; margin-bottom:1rem;">
-                JOE es un multiinstrumentista y productor independiente con sede en Caimitillo, Panamá. Su propuesta de valor se define por un fuerte trasfondo profesional y tecnológico: además de componer, cuenta con una sólida formación en desarrollo de software, análisis de datos y procesamiento digital de señales (DSP). 
+                JOE es un multiinstrumentista, productor independiente y desarrollador de software con base en Caimitillo, Panamá. Su propuesta se define por un fuerte trasfondo profesional y tecnológico: además de la composición, cuenta con una sólida trayectoria diseñando arquitecturas web, analizando métricas de audiencia y programando herramientas DSP (Procesamiento Digital de Señales) a medida.
               </p>
               <p style="color:var(--text-light); line-height:1.7; margin-bottom:1rem;">
-                Esta mentalidad de ingeniero le permite diseñar su propio flujo de trabajo, construir entornos interactivos personalizados y utilizar la Inteligencia Artificial no como una solución automatizada fácil, sino como una herramienta de amplificación técnica: para procesar accidentes armónicos, realizar síntesis generativa y optimizar distribución.
+                Esta combinación híbrida de ingeniero y artista le permite configurar su propio estudio físico y digital, automatizar flujos de trabajo eficientes, y aplicar la Inteligencia Artificial no como un sustituto perezoso de la creatividad, sino como una herramienta avanzada para la modulación armónica, síntesis de texturas generativas y optimización técnica de metadatos.
               </p>
               <p style="color:var(--text-light); line-height:1.7;">
-                El núcleo sigue siendo estrictamente humano, emocional y sensible: grabar el pulso de los tambores folclóricos de Panamá, modular sintetizadores analógicos en tiempo real y componer canciones que cuenten historias latinoamericanas con un propósito comercial y artístico de talla internacional.
+                El núcleo del proyecto sigue siendo puramente sensible y latinoamericano: capturar el pulso de los tambores de Panamá, estructurar la expresividad tímbrica de teclados analógicos antiguos y componer líricas con un profundo sentido de propósito y pertenencia cultural para la distribución global.
               </p>
             </div>
           </div>
@@ -2265,7 +2257,7 @@ Quedo a la espera de la disponibilidad de tu agenda.`;
     });
 
     // ==========================================
-    // RUTA VIRTUAL: PRENSA / DIGITAL EPK
+    // RUTA VIRTUAL: PRENSA / EPK
     // ==========================================
     Router.addRoute('#/prensa', function() {
       document.getElementById('viewport').innerHTML = `
@@ -2370,7 +2362,6 @@ CH4/CH5 - Interfaz L/R`;
           </div>
         </section>
       `;
-      // Inicializar decodificadores de ofuscación
       Obfuscator.init();
     });
 
@@ -2394,7 +2385,7 @@ CH4/CH5 - Interfaz L/R`;
     };
 
     // ==========================================
-    // RUTA VIRTUAL: CAPA DE DATOS PARA AGENTES INTELIGENTES (AI METADATA)
+    // RUTA VIRTUAL: CAPA DE DATOS AI METADATA
     // ==========================================
     Router.addRoute('#/ai', function() {
       document.getElementById('viewport').innerHTML = `
@@ -2472,7 +2463,7 @@ CH4/CH5 - Interfaz L/R`;
       `;
     });
 
-    // INICIALIZADORES DEL SISTEMA Y EVENTOS DEL DOM
+    // INICIALIZADORES DEL SISTEMA
     document.addEventListener('DOMContentLoaded', () => {
       const closeBtn = document.getElementById('closeLightboxBtn');
       const lightbox = document.getElementById('youtubeLightbox');
